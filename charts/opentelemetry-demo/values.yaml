@@ -227,6 +227,7 @@ components:
       env: true
     imageOverride:
       repository: sherlocksai/otel-demo-checkout
+      tag: latest
     service:
       port: 8080
     env:
@@ -494,6 +495,7 @@ components:
       env: true
     imageOverride:
       repository: sherlocksai/otel-demo-product-catalog
+      tag: latest
     service:
       port: 8080
     env:
