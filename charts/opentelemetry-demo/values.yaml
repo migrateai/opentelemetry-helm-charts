@@ -225,6 +225,8 @@ components:
     enabled: true
     useDefault:
       env: true
+    imageOverride:
+      repository: sherlocksai/otel-demo-checkout
     service:
       port: 8080
     env:
@@ -249,7 +251,9 @@ components:
       - name: FLAGD_PORT
         value: "8013"
       - name: OTEL_EXPORTER_OTLP_ENDPOINT
-        value: http://$(OTEL_COLLECTOR_NAME):4317
+        value: $(OTEL_COLLECTOR_NAME):4317
+      - name: OTEL_LOGS_EXPORTER
+        value: otlp
     resources:
       limits:
         memory: 20Mi
@@ -488,6 +492,8 @@ components:
     enabled: true
     useDefault:
       env: true
+    imageOverride:
+      repository: sherlocksai/otel-demo-product-catalog
     service:
       port: 8080
     env:
@@ -500,7 +506,11 @@ components:
       - name: FLAGD_PORT
         value: "8013"
       - name: OTEL_EXPORTER_OTLP_ENDPOINT
-        value: http://$(OTEL_COLLECTOR_NAME):4317
+        value: $(OTEL_COLLECTOR_NAME):4317
+      - name: OTEL_LOGS_EXPORTER
+        value: otlp
+      - name: OTEL_LOGS_EXPORTER
+        value: otlp
     mountedConfigMaps:
       - name: product-catalog-products
         mountPath: /usr/src/app/products
