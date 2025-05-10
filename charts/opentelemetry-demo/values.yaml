@@ -511,8 +511,6 @@ components:
         value: $(OTEL_COLLECTOR_NAME):4317
       - name: OTEL_LOGS_EXPORTER
         value: otlp
-      - name: OTEL_LOGS_EXPORTER
-        value: otlp
     mountedConfigMaps:
       - name: product-catalog-products
         mountPath: /usr/src/app/products
