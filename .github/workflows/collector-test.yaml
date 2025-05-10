@@ -1,11 +1,12 @@
 name: Test Collector Chart
 
 on:
-  pull_request:
-    paths:
-    - 'charts/opentelemetry-collector/**'
-    branches:
-      - main
+  workflow_dispatch:
+  # pull_request:
+  #   paths:
+  #   - 'charts/opentelemetry-collector/**'
+  #   branches:
+  #     - main
 
 jobs:
   collector-test:

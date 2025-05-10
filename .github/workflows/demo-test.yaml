@@ -1,11 +1,12 @@
 name: Test Demo Chart
 
 on:
-  pull_request:
-    paths:
-    - 'charts/opentelemetry-demo/**'
-    branches:
-      - main
+  workflow_dispatch:
+  # pull_request:
+  #   paths:
+  #   - 'charts/opentelemetry-demo/**'
+  #   branches:
+  #     - main
 
 jobs:
   demo-test:

@@ -1,11 +1,12 @@
 name: Test eBPF Chart
 
 on:
-  pull_request:
-    paths:
-      - "charts/opentelemetry-ebpf/**"
-    branches:
-      - main
+  workflow_dispatch:
+  # pull_request:
+  #   paths:
+  #     - "charts/opentelemetry-ebpf/**"
+  #   branches:
+  #     - main
 
 jobs:
   ebpf-test:

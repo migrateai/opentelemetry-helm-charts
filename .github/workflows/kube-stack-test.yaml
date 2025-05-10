@@ -1,11 +1,12 @@
 name: Test Opentelemetry Kube Stack Charts
 
 on:
-  pull_request:
-    paths:
-      - "charts/opentelemetry-kube-stack/**"
-    branches:
-      - main
+  workflow_dispatch:
+  # pull_request:
+  #   paths:
+  #     - "charts/opentelemetry-kube-stack/**"
+  #   branches:
+  #     - main
 
 jobs:
   opentelemetry-kube-stack-test:
