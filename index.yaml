@@ -23,6 +23,47 @@ entries:
   opentelemetry-demo:
   - apiVersion: v2
     appVersion: 2.0.2
+    created: "2025-05-10T15:49:00.040275746Z"
+    dependencies:
+    - condition: opentelemetry-collector.enabled
+      name: opentelemetry-collector
+      repository: https://open-telemetry.github.io/opentelemetry-helm-charts
+      version: 0.117.1
+    - condition: jaeger.enabled
+      name: jaeger
+      repository: https://jaegertracing.github.io/helm-charts
+      version: 3.4.0
+    - condition: prometheus.enabled
+      name: prometheus
+      repository: https://prometheus-community.github.io/helm-charts
+      version: 27.4.0
+    - condition: grafana.enabled
+      name: grafana
+      repository: https://grafana.github.io/helm-charts
+      version: 8.10.1
+    - condition: opensearch.enabled
+      name: opensearch
+      repository: https://opensearch-project.github.io/helm-charts
+      version: 2.31.0
+    description: opentelemetry demo helm chart
+    digest: 18eeb080483ab9cd45cb68c470e40e554bce134cd320778b0d7aea4626cbafe6
+    home: https://opentelemetry.io/
+    icon: https://opentelemetry.io/img/logos/opentelemetry-logo-nav.png
+    maintainers:
+    - name: dmitryax
+    - name: jaronoff97
+    - name: puckpuck
+    - name: tylerhelmuth
+    - name: migrateai
+    name: opentelemetry-demo
+    sources:
+    - https://github.com/open-telemetry/opentelemetry-demo
+    type: application
+    urls:
+    - https://github.com/migrateai/opentelemetry-helm-charts/releases/download/opentelemetry-demo-0.37.4/opentelemetry-demo-0.37.4.tgz
+    version: 0.37.4
+  - apiVersion: v2
+    appVersion: 2.0.2
     created: "2025-05-10T09:26:21.685690359Z"
     dependencies:
     - condition: opentelemetry-collector.enabled
@@ -140,4 +181,4 @@ entries:
     urls:
     - https://github.com/migrateai/opentelemetry-helm-charts/releases/download/opentelemetry-operator-0.88.4/opentelemetry-operator-0.88.4.tgz
     version: 0.88.4
-generated: "2025-05-10T09:26:22.050756574Z"
+generated: "2025-05-10T15:49:00.040287468Z"
