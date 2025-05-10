@@ -324,6 +324,9 @@ components:
       env: true
     service:
       port: 8080
+    imageOverride:
+      repository: sherlocksai/otel-demo-frontend
+      tag: latest
     env:
       - name: FRONTEND_PORT
         value: "8080"
@@ -359,9 +362,12 @@ components:
       limits:
         memory: 250Mi
     securityContext:
-      runAsUser: 1001  # nextjs
-      runAsGroup: 1001
-      runAsNonRoot: true
+      privileged: true
+      capabilities:
+        add: ["NET_ADMIN"]
+      runAsUser: 0
+      runAsGroup: 0
+      runAsNonRoot: false
 
   frontend-proxy:
     enabled: true
