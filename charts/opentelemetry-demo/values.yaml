@@ -228,6 +228,7 @@ components:
     imageOverride:
       repository: sherlocksai/otel-demo-checkout
       tag: latest
+      pullPolicy: Always
     service:
       port: 8080
     env:
