@@ -1,0 +1,5 @@
+owner: migrateai
+git-repo: opentelemetry-helm-charts
+package-path: .cr-release-packages
+charts-repo: https://migrateai.github.io/opentelemetry-helm-charts
+pages-branch: gh-pages 
