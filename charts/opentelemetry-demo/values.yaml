@@ -512,6 +512,11 @@ components:
         value: $(OTEL_COLLECTOR_NAME):4317
       - name: OTEL_LOGS_EXPORTER
         value: otlp
+      - name: NEW_RELIC_LICENSE_KEY
+        valueFrom:
+          secretKeyRef:
+            name: new-relic-license-key
+            key: license-key
     mountedConfigMaps:
       - name: product-catalog-products
         mountPath: /usr/src/app/products
